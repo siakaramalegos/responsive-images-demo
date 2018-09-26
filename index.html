@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Responsive Doggos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link>
+</head>
+
+<body>
+  <h1>Responsive Puppos Demo</h1>
+
+  <h2>File Formats</h2>
+  <p>Compare the image quality across these different file formats, all 400px in width:</p>
+  <div class="image-overlay">
+    <h2>PNG-24, 316KB</h2>
+    <img src="puppo_png24.png" alt="dog wearing a striped t-shirt" />
+  </div>
+  <div class="image-overlay">
+    <h2>PNG-8, 79KB</h2>
+    <img src="puppo_png8_128dith.png" alt="dog wearing a striped t-shirt" />
+  </div>
+  <div class="image-overlay">
+    <h2>GIF, 43KB</h2>
+    <img src="puppo_32dith.gif" alt="dog wearing a striped t-shirt" />
+  </div>
+  <div class="image-overlay">
+    <h2>JPG, 46KB</h2>
+    <img src="puppo_400.jpg" alt="dog wearing a striped t-shirt" />
+  </div>
+  <p>Photo by <a href="https://unsplash.com/photos/DziZIYOGAHc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Charles Deluvio 🇵🇭🇨🇦</a> on <a href="https://unsplash.com">Unsplash</a></p>
+
+
+
+
+  <h2>Size and Resolution Responsiveness</h2>
+
+  <h3>srcset</h3>
+  <img
+    src="puppo_400.jpg"
+    srcset="puppo_400.jpg 400w,
+            puppo_800.jpg 800w,
+            puppo_1600.jpg 1600w"
+    alt="dog wearing a striped t-shirt with a bold red background" />
+
+  <h2>srcset and sizes</h2>
+  <p>Using the same photo as the above example - notice that some browsers (Chrome but not Safari) use the highest resolution in the cache rather than solely the instructions in this tag. This is good - no reason to not use the best picture if it already exists locally.</p>
+  <img class="srcset-with-sizes"
+    src="puppo_400.jpg"
+    srcset="puppo_400.jpg 400w,
+            puppo_800.jpg 800w,
+            puppo_1600.jpg 1600w"
+    sizes="(min-width: 1040px) 1000px,
+           (min-width: 640px) 50%,
+           320px"
+    alt="dog wearing a striped t-shirt with a bold red background" />
+
+  <p>If we introduce a separate, unused photo, the browser has no higher-resolution cached version to show us and follows our instructions more closely:</p>
+  <img class="srcset-with-sizes"
+    src="pug_400.jpg"
+    srcset="pug_400.jpg 400w,
+            pug_800.jpg 800w,
+            pug_1600.jpg 1600w"
+    sizes="(min-width: 1040px) 1000px,
+           (min-width: 640px) 50%,
+           320px"
+    alt="pug in a blanket" />
+
+  <p>Photo by <a href="https://unsplash.com/photos/2Ts5HnA67k8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Matthew Henry</a> on <a href="https://unsplash.com">Unsplash</a></p>
+
+
+
+
+  <h2>srcset with x-descriptors</h2>
+  <p>You can alternatively give resolution info instead of width for each file, if the width is the same for all screen sizes. I usually find this more confusing. Leave out the resolution for the base low-resolution version since 1x is implied.</p>
+  <img src="pug_400.jpg"
+    srcset="pug_400.jpg,
+            pug_800.jpg 2x,
+            pug_1600.jpg 4x"
+    width="300px" />
+
+
+
+
+  <h2>Art Direction with picture</h2>
+
+  <p>Sometimes it's better if the image itself changes for different display sizes. "For example, if a large landscape
+    shot with a person in the middle is shown on a website when viewed on a desktop browser, then shrunk down when the
+    website is viewed on a mobile browser, it will look bad as the person will be really tiny and hard to see. It would
+    probably be better to show a smaller, portrait image on mobile, which shows the person zoomed in." <sup>1</sup> It
+    also allows us to use new image file types like webp while still providing fallback image types. See the source for
+    more info.
+
+    <p>1: <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive
+        Images</a> from MDN</p>
+
+    <p>Note that the viewport meta tag is set in the head via the HTML settings in this codepen</p>
+</body>
+
+</html>

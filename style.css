@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.image-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.image-overlay h2 {
+  position: absolute;
+  right: 20px;
+  color: white;
+}
+
+img.srcset-with-sizes { width: 320px; }
+
+@media(min-width: 640px) {
+  img.srcset-with-sizes { width: 50%; }
+}
+
+@media(min-width: 1040px) {
+  img.srcset-with-sizes { width: 1000px; }
+}
