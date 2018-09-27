@@ -12,6 +12,10 @@
 
 <body>
   <h1>Responsive Puppos Demo</h1>
+  <p>Note that the viewport meta tag is set in the head for this demo. It is required for this to work.</p>
+
+
+
 
   <h2>File Formats</h2>
   <p>Compare the image quality across these different file formats, all 400px in width:</p>
@@ -45,6 +49,9 @@
             puppo_800.jpg 800w,
             puppo_1600.jpg 1600w"
     alt="dog wearing a striped t-shirt with a bold red background" />
+
+
+
 
   <h2>srcset and sizes</h2>
   <p>Using the same photo as the above example - notice that some browsers (Chrome but not Safari) use the highest resolution in the cache rather than solely the instructions in this tag. This is good - no reason to not use the best picture if it already exists locally.</p>
@@ -85,19 +92,42 @@
 
 
 
-  <h2>Art Direction with picture</h2>
+  <h2>Art Direction with picture Element</h2>
 
-  <p>Sometimes it's better if the image itself changes for different display sizes. "For example, if a large landscape
-    shot with a person in the middle is shown on a website when viewed on a desktop browser, then shrunk down when the
-    website is viewed on a mobile browser, it will look bad as the person will be really tiny and hard to see. It would
-    probably be better to show a smaller, portrait image on mobile, which shows the person zoomed in." <sup>1</sup> It
-    also allows us to use new image file types like webp while still providing fallback image types. See the source for
-    more info.
+  <picture>
+    <source
+      media="(min-width: 800px)"
+      srcset="wide_800.jpg 800w,
+              wide_1600.jpg 1600w">
+    <source
+      media="(min-width: 400px)"
+      srcset="narrow_400.jpg 400w,
+              narrow_800.jpg 800w">
+    <img
+      src="wide_800.jpg"
+      alt="Woman with dog looking at Grand Canyon">
+  </picture>
 
-    <p>1: <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive
-        Images</a> from MDN</p>
+  <p>Photo by <a href="https://unsplash.com/photos/jd0hS7Vhn_A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Patrick Hendry</a> on <a href="https://unsplash.com">Unsplash</a></p>
 
-    <p>Note that the viewport meta tag is set in the head via the HTML settings in this codepen</p>
+
+
+
+  <h2>New File Formats with picture Element</h2>
+  <picture>
+    <source srcset="sofa_pug_400.webp 400w,
+                    sofa_pug_800.webp 800w"
+            type="image/webp" />
+    <img src="sofa_pug_400.jpg"
+         srcset="sofa_pug_400.jpg 400w,
+                 sofa_pug_800.jpg 800w"
+         sizes="400px"
+         width="400px"
+         alt="pug on a sofa looking sad" />
+  </picture>
+
+  <p>Photo by <a href="https://unsplash.com/photos/VYcDFMSkUAA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">sarandy westfall</a> on <a href="https://unsplash.com">Unsplash</a></p>
+
 </body>
 
 </html>
