@@ -9,7 +9,8 @@ Did you attend my talk on Responsive Images? This repo is the demo code, and bel
 - [Modern DevTools](https://moderndevtools.com/) course by Umar Hansa (not free) and his weekly-ish newsletter (free!)
 - [RespImageLint](https://ausi.github.io/respimagelint/) bookmarklet for linting images for responsiveness - a great performance tool!
 - [Why art direction is critical to responsive design](https://www.webdesignerdepot.com/2017/04/why-art-direction-is-critical-to-responsive-design/) by Web Designer Depot staff
-- [Converting Images to webp](https://www.smashingmagazine.com/2018/07/converting-images-to-webp/) by Jeremy Wagner. In addition to Photoshop and Sketch, he gives instructions on the `cwebp` CLI tool too which is great if you can't those other tools like me. More details in the [docs on `cwebp` here](https://developers.google.com/speed/webp/docs/cwebp).
+- [Converting Images to webp](https://www.smashingmagazine.com/2018/07/converting-images-to-webp/) by Jeremy Wagner. In addition to Photoshop and Sketch, he gives instructions on the `cwebp` CLI tool too which is great if you can't those other tools like me. More details in the [docs on `cwebp` here](https://developers.google.com/speed/webp/docs/cwebp). Or buy the full manual [here](https://www.smashingmagazine.com/2018/07/webp-manual/) (free for Smashing members).
+- [Loading Images](https://survivejs.com/webpack/loading/images/) in Webpack on Survive JS by Juho Vepsäläinen.
 
 ## Other sources and attribution
 
