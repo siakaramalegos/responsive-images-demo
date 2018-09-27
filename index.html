@@ -7,7 +7,12 @@
   <title>Responsive Doggos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-  <link>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -21,19 +26,19 @@
   <p>Compare the image quality across these different file formats, all 400px in width:</p>
   <div class="image-overlay">
     <h2>PNG-24, 316KB</h2>
-    <img src="puppo_png24.png" alt="dog wearing a striped t-shirt" />
+    <img src="./images/puppo_png24.png" alt="dog wearing a striped t-shirt" />
   </div>
   <div class="image-overlay">
     <h2>PNG-8, 79KB</h2>
-    <img src="puppo_png8_128dith.png" alt="dog wearing a striped t-shirt" />
+    <img src="./images/puppo_png8_128dith.png" alt="dog wearing a striped t-shirt" />
   </div>
   <div class="image-overlay">
     <h2>GIF, 43KB</h2>
-    <img src="puppo_32dith.gif" alt="dog wearing a striped t-shirt" />
+    <img src="./images/puppo_32dith.gif" alt="dog wearing a striped t-shirt" />
   </div>
   <div class="image-overlay">
     <h2>JPG, 46KB</h2>
-    <img src="puppo_400.jpg" alt="dog wearing a striped t-shirt" />
+    <img src="./images/puppo_400.jpg" alt="dog wearing a striped t-shirt" />
   </div>
   <p>Photo by <a href="https://unsplash.com/photos/DziZIYOGAHc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Charles Deluvio 🇵🇭🇨🇦</a> on <a href="https://unsplash.com">Unsplash</a></p>
 
@@ -44,10 +49,10 @@
 
   <h3>srcset</h3>
   <img
-    src="puppo_400.jpg"
-    srcset="puppo_400.jpg 400w,
-            puppo_800.jpg 800w,
-            puppo_1600.jpg 1600w"
+    src="./images/puppo_400.jpg"
+    srcset="./images/puppo_400.jpg 400w,
+            ./images/puppo_800.jpg 800w,
+            ./images/puppo_1600.jpg 1600w"
     alt="dog wearing a striped t-shirt with a bold red background" />
 
 
@@ -56,10 +61,10 @@
   <h2>srcset and sizes</h2>
   <p>Using the same photo as the above example - notice that some browsers (Chrome but not Safari) use the highest resolution in the cache rather than solely the instructions in this tag. This is good - no reason to not use the best picture if it already exists locally.</p>
   <img class="srcset-with-sizes"
-    src="puppo_400.jpg"
-    srcset="puppo_400.jpg 400w,
-            puppo_800.jpg 800w,
-            puppo_1600.jpg 1600w"
+    src="./images/puppo_400.jpg"
+    srcset="./images/puppo_400.jpg 400w,
+            ./images/puppo_800.jpg 800w,
+            ./images/puppo_1600.jpg 1600w"
     sizes="(min-width: 1040px) 1000px,
            (min-width: 640px) 50%,
            320px"
@@ -67,10 +72,10 @@
 
   <p>If we introduce a separate, unused photo, the browser has no higher-resolution cached version to show us and follows our instructions more closely:</p>
   <img class="srcset-with-sizes"
-    src="pug_400.jpg"
-    srcset="pug_400.jpg 400w,
-            pug_800.jpg 800w,
-            pug_1600.jpg 1600w"
+    src="./images/pug_400.jpg"
+    srcset="./images/pug_400.jpg 400w,
+            ./images/pug_800.jpg 800w,
+            ./images/pug_1600.jpg 1600w"
     sizes="(min-width: 1040px) 1000px,
            (min-width: 640px) 50%,
            320px"
@@ -83,10 +88,10 @@
 
   <h2>srcset with x-descriptors</h2>
   <p>You can alternatively give resolution info instead of width for each file, if the width is the same for all screen sizes. I usually find this more confusing. Leave out the resolution for the base low-resolution version since 1x is implied.</p>
-  <img src="pug_400.jpg"
-    srcset="pug_400.jpg,
-            pug_800.jpg 2x,
-            pug_1600.jpg 4x"
+  <img src="./images/pug_400.jpg"
+    srcset="./images/pug_400.jpg,
+            ./images/pug_800.jpg 2x,
+            ./images/pug_1600.jpg 4x"
     width="300px" />
 
 
@@ -97,14 +102,14 @@
   <picture>
     <source
       media="(min-width: 800px)"
-      srcset="wide_800.jpg 800w,
-              wide_1600.jpg 1600w">
+      srcset="./images/wide_800.jpg 800w,
+              ./images/wide_1600.jpg 1600w">
     <source
       media="(min-width: 400px)"
-      srcset="narrow_400.jpg 400w,
-              narrow_800.jpg 800w">
+      srcset="./images/narrow_400.jpg 400w,
+              ./images/narrow_800.jpg 800w">
     <img
-      src="wide_800.jpg"
+      src="./images/wide_800.jpg"
       alt="Woman with dog looking at Grand Canyon">
   </picture>
 
@@ -115,12 +120,12 @@
 
   <h2>New File Formats with picture Element</h2>
   <picture>
-    <source srcset="sofa_pug_400.webp 400w,
-                    sofa_pug_800.webp 800w"
+    <source srcset="./images/sofa_pug_400.webp 400w,
+                    ./images/sofa_pug_800.webp 800w"
             type="image/webp" />
-    <img src="sofa_pug_400.jpg"
-         srcset="sofa_pug_400.jpg 400w,
-                 sofa_pug_800.jpg 800w"
+    <img src="./images/sofa_pug_400.jpg"
+         srcset="./images/sofa_pug_400.jpg 400w,
+                 ./images/sofa_pug_800.jpg 800w"
          sizes="400px"
          width="400px"
          alt="pug on a sofa looking sad" />
