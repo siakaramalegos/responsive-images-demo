@@ -1,6 +1,6 @@
 # Responsive Images
 
-Did you attend my talk on Responsive Images? This repo is the demo code, and below are the recommended resources! You can find the slides [here](https://siakaramalegos.github.io/responsive-images-slides/). They are provided as a convenience to the attendees, so please do not reuse them without my permission.
+Did you attend my talk on Responsive Images? This repo is the demo code, and below are the recommended resources! You can find the slides [here](https://siakaramalegos.github.io/responsive-images-slides/). They are provided as a convenience to the attendees, so please do not reuse them without my permission. To progress the slides, hit the "N" (for next). Hit "P" (previous) to go backwards.
 
 ## Recommended Resources
 
